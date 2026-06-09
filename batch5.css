@@ -1,6 +1,6 @@
 body{
     color:green;
-    background-color:pink;
+    background-color:white;
 }
 
 p{
@@ -14,13 +14,18 @@ p{
 img{
     height: 500px;
     width:500px;
-    border-radius: 500px;
+    /* /* border-radius: 500px; */
+}
+@media (max-width: 600px){
+    img{
+        height:auto;
+        width:100%;
+    }
 }
 
 video{
-    height: 500px;
+    width:100%;
 }
-
 ol{
     list-style-type:upper-roman;
 }
@@ -46,8 +51,15 @@ table,th,td{
 }
 nav{
     display:flex;
-    flex-direction: row;
+    flex-direction:column;
 
+}
+@media(max-width:600px){
+    nav{
+        display:flex;
+        flex-direction: row;
+        /* gap: 50px; */
+    }
 }
 #p1{
     font-style: italic;
@@ -60,5 +72,11 @@ nav{
 }
 .grid{
     display:grid;
-    grid-template-columns: 33% 33% 33%;
+}
+
+@media(min-width: 1024px){
+    .grid{
+        display: grid;
+        grid-template-columns:33% 33% 33%;
+    }
 }
